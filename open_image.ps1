@@ -12,6 +12,8 @@ for ($i = 0; $i -lt $image_list.Count; $i++) {
         [System.Windows.Forms.SendKeys]::SendWait("{F11}")
         Start-Sleep -Seconds 1
         [System.Windows.Forms.SendKeys]::SendWait("^0")
+        Pause
+        Stop-Process -Name "Microsoft.Photos"
     }
     Write-Output "not jpg"
 }
